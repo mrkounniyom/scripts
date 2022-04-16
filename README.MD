@@ -11,3 +11,6 @@ repo to track my scripts for my laptop.
 + pyrename.py: renames files with random names from given directory.
 + randwal.sh: randomizes wallpaper with nitrogen
 + runintell: runs .intell script from standalone download of IntelliJ IDEA 
+
+## TODO 
++ need to add new scripts to above list.
