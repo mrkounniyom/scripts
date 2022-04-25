@@ -9,4 +9,6 @@ echo "> Backing up .config"
 
 #zip -r --exclude=*backups* --exclude=*/.* /var/www/backups/site/$(date +\%Y-\%m-\%d-\%H-\%M).zip /var/www
 
-zip -r --exclude=*BraveSoftware* --exclude=*Bitwarden* ~/.backconf/$filename ~/.config/*
+#zip -r --exclude=*BraveSoftware* --exclude=*Bitwarden* ~/.backconf/$filename ~/.config/*
+
+zip -r ~/.backconf/$filename -@ < ~/scripts/list.txt

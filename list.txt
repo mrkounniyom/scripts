@@ -1,0 +1,17 @@
+.config/alacritty
+.config/autostart
+.config/betterlockscreenrc
+.config/dunst
+.config/htop
+.config/i3
+.config/rofi
+.config/spotifyd
+.config/spotify-tui
+.config/starship.toml
+.bashrc
+.bashali
+.bash_profile
+.doom.d
+.vim
+.vimrc
+.viminfo
