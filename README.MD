@@ -7,10 +7,13 @@ repo to track my scripts for my laptop.
 + autorun.sh: autorun shell script for various wm. 
 + autotiling: autotiling script from https://github.com/nwg-piotr/autotiling
 + bitwarden.sh: runs bitwarden appimage as a background process. 
-+ confback.sh: backs up .config to a target directory.
++ confback.sh: backs up .config to a target directory. Uses list.txt for list of dirs to zip.
 + pyrename.py: renames files with random names from given directory.
 + randwal.sh: randomizes wallpaper with nitrogen
 + runintell: runs .intell script from standalone download of IntelliJ IDEA 
++ spotify: script to run spotify-tui
++ ygo-list_dup-check.py: python script to remove duplicates from a plain text list of yugioh cards. 
 
-## TODO 
+## TODO
 + need to add new scripts to above list.
+
