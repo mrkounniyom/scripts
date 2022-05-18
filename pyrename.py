@@ -6,7 +6,8 @@ letters = [
     'u', 'v', 'w', 'x', 'z', 'y'
 ]
 #enter the path to the folder: relative or absolute
-direc = input('Enter the path to directory: ')
+direc = '../wallpapers/matt/'
+#print(os.listdir('.'))
 os.chdir(direc)
 files = os.listdir('.')
 for i,x in enumerate(files, 1):
@@ -17,3 +18,5 @@ for i,x in enumerate(files, 1):
         newName = newName + str(random.choice(letters))
         count += 1
     os.rename(x, '{}_{}{}'.format(i,newName, ext))
+
+print('Success')
