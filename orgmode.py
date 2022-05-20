@@ -54,9 +54,11 @@ text_area.pack(side=LEFT)
 #print "Daily plan for", today
 #print "-------------------------\n"
 
+
+# global variables #########################################
 nodelist = ''
-
-
+spacing = '   '
+############################################################
 
 def loadFile(filename):
     global nodelist, text_area
@@ -66,24 +68,26 @@ def loadFile(filename):
     text_area.insert(INSERT, '> Viewing ' + filename + ' <')
     text_area.insert(INSERT, '\n')
 
+def save_file():
+    global text_area
+    f = filedialog.asksaveasfile(mode='w', defaultextension=".txt")
+    if f is None:
+        return
+    text2save = str(text_area.get(1.0, END)) # starts from `1.0`, not `0.0`
+    f.write(text2save)
+    f.close() # `()` was missing.
 
 
 def headingTab(node):
-
     """
-
     returns number of tabs for the heading.
-
     """
-
+    global spacing
     headlvl = node.Level()-1
-
     head = ""
 
     for i in range(0,headlvl):
-
-        head = head + "   "
-
+        head = head + spacing
     return head
 
 
@@ -91,34 +95,31 @@ def headingTab(node):
 def bodyTab(node):
 
     """
-
     returns number of tabs for the body.
-
     """
-
+    global spacing
     headlvl = node.Level()
-
     head = ""
 
     for i in range(0,headlvl):
-
-        head = head + "   "
-
+        head = head + spacing
     return head
 
 
 # print Headings + body
-
 def print_nodes():
+    """
+    prints nodes into text_area
+    """
     global nodelist, text_area
     if text_area.get('1.0', 'end') != '':
         text_area.delete('1.0', 'end')
     for n in nodelist:
 
+        #text_area.insert(INSERT, headingTab(n) + '*' + n.Heading() + '\n')
         text_area.insert(INSERT, headingTab(n) + n.Heading() + '\n')
-
+        #text_area.insert(INSERT, bodyTab(n) + '*' + n.Body())
         text_area.insert(INSERT, bodyTab(n) + n.Body())
-
         text_area.insert(INSERT, '\n')
 
 
@@ -139,6 +140,9 @@ def print_nodes():
 
 # open files
 def open_file():
+    """
+    Opens filedialog
+    """
     filetypes = (
         ('org files', '*.org'),
         ('All files', '*.*')
@@ -152,18 +156,15 @@ def open_file():
     print_nodes()
 
 # Insert Buttons
-
 q = ttk.Button(buttonFrame, text="Quit", command=root.destroy)
-
-o = ttk.Button(buttonFrame, text="Open File", command=open_file)
+o = ttk.Button(buttonFrame, text="Open", command=open_file)
+s = ttk.Button(buttonFrame, text="Save", command=save_file)
 
 buttonFrame.grid(column=3, row=1)
 
-q.pack(side=TOP)
-
-o.pack(side=BOTTOM, pady=5)
-
-
+q.pack(side=BOTTOM, pady=5, padx=2)
+o.pack(side=BOTTOM, pady=5, padx=2)
+s.pack(side=BOTTOM, pady=5, padx=2)
 
 open_file()
 root.mainloop()
