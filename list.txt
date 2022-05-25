@@ -4,6 +4,12 @@
 /home/mk/.config/dunst
 /home/mk/.config/htop
 /home/mk/.config/i3
+/home/mk/.config/kitty
+/home/mk/.config/neofetch
+/home/mk/.config/picom
+/home/mk/.config/polybar
+/home/mk/.config/qtile
+/home/mk/.config/ranger
 /home/mk/.config/rofi
 /home/mk/.config/spotifyd
 /home/mk/.config/spotify-tui

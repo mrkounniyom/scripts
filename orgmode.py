@@ -119,7 +119,7 @@ def print_nodes():
         #text_area.insert(INSERT, headingTab(n) + '*' + n.Heading() + '\n')
         text_area.insert(INSERT, headingTab(n) + n.Heading() + '\n')
         #text_area.insert(INSERT, bodyTab(n) + '*' + n.Body())
-        text_area.insert(INSERT, bodyTab(n) + n.Body())
+        text_area.insert(INSERT, n.Body())
         text_area.insert(INSERT, '\n')
 
 
