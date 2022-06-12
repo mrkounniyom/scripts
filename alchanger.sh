@@ -6,9 +6,11 @@ config="$HOME/.config/alacritty/alacritty.yml"
 
 declare -a options=(
 "doom-one"
+"flat-remix"
 "gotham"
 "horizondark"
-"flat-remix"
+"palenight"
+"xterm"
 "quit"
 )
 
@@ -23,6 +25,10 @@ case $choice in
         sed -i '/colors:/c\colors: *horizondark' $config ;;
     'flat-remix')
         sed -i '/colors:/c\colors: *flat-remix' $config ;;
+    'palenight')
+        sed -i '/colors:/c\colors: *palenight' $config ;;
+    'xterm')
+        sed -i '/colors:/c\colors: *xterm' $config ;;
 
     'quit')
         echo "No theme chosen" && exit 1 ;;

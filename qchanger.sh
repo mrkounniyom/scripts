@@ -4,8 +4,9 @@
 config="$HOME/.config/qtile/config.py"
 
 declare -a options=(
-"Challenger Deep"
 "1337"
+"Challenger Deep"
+"Doom-One"
 "Nord"
 "Unknown"
 "quit"
@@ -22,7 +23,8 @@ case $choice in
         sed -i '/colors =/c\colors = qtheme.nord' $config && qtile cmd-obj -o cmd -f restart ;;
     'Unknown')
         sed -i '/colors =/c\colors = qtheme.notSure' $config && qtile cmd-obj -o cmd -f restart ;;
-
+    'Doom-One')
+        sed -i '/colors =/c\colors = qtheme.doom_one' $config && qtile cmd-obj -o cmd -f restart ;;
 
 
     'quit')

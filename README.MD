@@ -4,6 +4,7 @@
 repo to track my scripts for my laptop. 
 
 ## List of Scripts. 
++ alchanger.sh: script to change alacritty rice modified from Matt Weber of the Linux Cast
 + autorun.sh: autorun shell script for various wm. 
 + autotiling: autotiling script from https://github.com/nwg-piotr/autotiling
 + bitwarden.sh: runs bitwarden appimage as a background process. 
@@ -11,10 +12,12 @@ repo to track my scripts for my laptop.
 + orgmode.py: Interaces with orgnode.py to parse org-mode documents into plain text for use at my job as Emacs is not currently allowed.
 + orgnode.py: Used to parse orgmode files taken from [here](http://members.optusnet.com.au/~charles57/GTD). I made a modifications to account for comments and lists.
 + pyrename.py: renames files with random names from given directory.
++ qchanger.sh: based on alchanger but for qtile. 
 + randomfile.py: Gives me a random file from the given directory.
 + randwal.sh: randomizes wallpaper with nitrogen
 + runintell: runs .intell script from standalone download of IntelliJ IDEA 
 + spotify: script to run spotify-tui
++ updall.sh: script to run various software updaters.
 + ygo-list_dup-check.py: python script to remove duplicates from a plain text list of yugioh cards. 
 
 ## TODO
